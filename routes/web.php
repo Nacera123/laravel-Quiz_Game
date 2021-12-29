@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+
+
+route::get('/', 'App\Http\Controllers\MainController@home')->name('home1');
+Route::get('Acceuil', 'App\Http\Controllers\MainController@home')->name('Acceuil');
+Route::get('Acceuil', 'App\Http\Controllers\AdminController@createQuizAction')->name('Acceuil_user');
