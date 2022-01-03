@@ -45,6 +45,14 @@ class AdminController extends Controller{
         }
 
     }
+    //recuperer id quiz 
+    public function detailQuiz($id){
+        //recuperer le nom de ma fonction dans le fichier quizze 
+        $quiz = quizze::find($id);
+
+        return view('detailquiz', compact('quiz'));
+
+    }
 
 
 

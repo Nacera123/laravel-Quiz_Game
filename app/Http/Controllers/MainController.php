@@ -18,6 +18,22 @@ class MainController extends Controller{
 
     }
 
+    public function Acceuil(){
+
+
+        return view('layout/header');
+
+
+    }
+
+    public function connexion(){
+
+
+        return view('connexion');
+
+
+    }
+
 
 
 

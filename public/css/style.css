@@ -30,8 +30,8 @@ a {
 }
 
 .container {
-    width: 900px;
-    margin: auto;
+    width: 1500px;
+    margin-right: auto;
     background-color: white;
     padding: 1.25rem;
     margin-top: 0.625rem;
@@ -92,4 +92,80 @@ a {
     font-weight: bold;
     padding: 0.325rem 0;
     cursor: pointer;
+}
+
+.jeux{
+
+    width: 1800px; height:500px;
+    margin-left:5px;
+
+    margin-top: 150px;
+
+}
+.jeux2{
+
+    width: 1000px; height:150px;
+    margin-left:5px;
+
+    margin-top: 150px;
+
+}
+.tablejeux{
+
+    background-color:rgb(206, 200, 200);
+    width: 1800px; height:500px;
+    margin-left:20px;
+
+    
+
+}
+.tablejeux2{
+
+    background-color:rgb(206, 200, 200);
+    width: 1000px; height:150px;
+    margin-left:20px;
+
+    
+
+}
+
+.heaedrjeux{
+
+    background-color:rgb(190, 183, 183);
+    width: 1800px; height:60px;
+
+
+}
+#navbar {
+    overflow: hidden;
+    background-color: rgb(228, 106, 106);
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0;
+     width: 1400px; height:80px; 
+}
+
+#navbarli {
+    display: inline;
+    color: #2C74FF;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    width: 200px; height:40px;
+}
+
+#navbarul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#inscription{
+    background-color: rgb(228, 106, 106);
+    width: 400px; height:300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+ 
 }

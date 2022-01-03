@@ -1,51 +1,52 @@
 {{view('layout.header')}}
 
-{{view('layout.navbar')}}
-
-
-            <div>
-                <h2> Le chocolat - I 
-                    <span>xx questions</span>
-                </h2>
-            </div>
-
-            <div>
-                <h4> 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr.
-                </h4>
-            </div>
-
-            <div>
-                <p>by author name</p>
-            </div>
-
-            <div class="row">
-
-
-                <div class="col question">
-                    <span class="level level--medium">Confirmé</span>
-                    <div class="question__question"> 
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr. ?
-                    </div>
-                    <div>
-                        <ul>
-                            @foreach ($quizList as $quiz)
-
-                            <li>{{$quiz->title}}</li>
-                            <li>{{$quiz->description}}</li>
-                            <li>{{$quiz->status}}</li>
-                            <li>{{$quiz->created_at}}</li>
-                            <li>{{$quiz->updated_at}}</li>
-                            <li>{{$quiz->app_users_id}}</li>
-                            @endforeach
-                        </ul> 
-                    </div>
-                </div>
 
 
 
+<div class = "jeux">
+        <table class="tablejeux">
+
+            <thead class="heaedrjeux">
+                <tr>
+                    <th class="jeuxentete"><a href=""><h2>TITRE</h2></a></th>
+                    <th class="jeuxentete"><h2>DESCRIPTION</h2></th>
+                    <th class="jeuxentete"><h2>STATUS</h2></th>
+                    <th class="jeuxentete"><h2>DATE DE CREATION</h2></th>
+                    <th class="jeuxentete"><h2>DATE DE MISE A JOUR</h2></th>
+                    <th class="jeuxentete"><h2>ID UTILISATEUR</h2></th>
+                    <th class="jeuxentete"><h2>NOM-PRENOM</h2></th>
+                    <th class="jeuxentete"><h2></h2></th>
+
+                </tr>
+            </thead>
+
+
+            <tbody>
+
+                    @foreach ($quizList as $quiz)
+                    <tr>
+                    
+                        <td style="color:rgb(86, 150, 224);text-transform:uppercase;"><a href="{{route('quiz_detail', ['id' => $quiz->id])}}">{{$quiz->title}}</a></td>
+                    
+                        <td>{{$quiz->description}}<hr></td>
+                        <td>{{$quiz->status}}<hr></td>
+                        <td>{{$quiz->created_at}}<hr></td>
+                        <td>{{$quiz->updated_at}}</td>
+                        <td>{{$quiz->app_users_id}}<hr></td>
+                        <td>{{$quiz->user->firstname}}/{{$quiz->user->lastname}}<hr></td>
+
+                    </tr>
+                    @endforeach
+
+
+            </tbody>
+        </table> 
+</div> 
 
 
 
 
-    {{view('layout.footer')}}
+
+
+
+{{view('layout.footer')}}
