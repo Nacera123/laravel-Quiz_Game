@@ -9,14 +9,17 @@ class Question extends Model
 {
     protected $table = 'questions';
 
-    public function reponses(){
+    public function Quiz()
+    {
 
-        return $this->hasMany('App\\Models\\Reponse', 'questions_id', 'id');
-
+        // return $this->belongsTo('App\\Models\\quizze', 'quizzes_id', 'id');
+        return $this->belongsTo(quizze::class);
     }
 
-    public function level(){
-        
-        return $this->belongsTo('App\\Models\\Level', 'levels_id', 'id');
+    public function reponses()
+    {
+
+        // return $this->hasMany('App\\Models\\Reponse', 'questions_id', 'id');
+        return $this->hasMany(Reponse::class);
     }
 }

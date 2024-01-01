@@ -33,7 +33,7 @@
                         <td>{{$quiz->created_at}}<hr></td>
                         <td>{{$quiz->updated_at}}</td>
                         <td>{{$quiz->app_users_id}}<hr></td>
-                        <td>{{$quiz->user->firstname}}/{{$quiz->user->lastname}}<hr></td>
+                        {{-- <td>{{$quiz->user->firstname}}/{{$quiz->user->lastname}}<hr></td> --}}
 
                     </tr>
                     @endforeach

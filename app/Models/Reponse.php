@@ -9,4 +9,9 @@ class Reponse extends Model
 {
     protected $table = 'answers';
 
+    public function Question()
+    {
+        // return $this->belongsTo('app\\Models\\Question', 'questions_id', 'id');
+        return $this->belongsTo(Question::class);
+    }
 }
